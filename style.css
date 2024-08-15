@@ -1,28 +1,33 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
-/*COLORES*/
-.text-yellow{
-color: #fbff00ef;
-}
- /* .navbar{
-  position:static;
-}  */
 
-.bg-blur{
-  backdrop-filter: blur(60px);
+/*COLORES*/
+.text-yellow {
+  color: #fbff00ef;
 }
+
+ .navbar{
+  position:absolute;
+}  
+
+.blur1 {
+ z-index: 1;
+ position: absolute;
+ backdrop-filter: blur(30px);
+}
+
+
 
 
 /*ESPACIOS*/
 /* .mt-p{
   margin-top: 105px;
 } */
-.centrado{
+.centrado {
   display: flex;
   justify-content: center;
-  
-    text-align: center;
-    vertical-align: middle;
+
+  text-align: center;
+  vertical-align: middle;
 }
 
 /* body{
@@ -33,155 +38,263 @@ color: #fbff00ef;
     overflow: hidden; 
     backdrop-filter: blur(60px); 
     /* cursor: none;  */
-body{
-    background-color: rgba(24, 28, 41, 0.863);
-    
+body {
+   /* background-color: rgba(1, 8, 34, 0.993);  */
+   background-color: #ffffff;
+   background-image: url("./source/blutAna.png");
+   backdrop-filter: blur(0px); 
+   width: 100%;
+   height: 100%;
+
+   
+
 }
-*{
-    font-family: "Passion One", sans-serif;
+#background {
+  position: absolute;
+  background-image: url("./source/blutAna.png");
+  background-size: 110% 140%;
+  background-repeat: no-repeat;
+  background-color: #000000;
+  z-index: 0;
+  backdrop-filter: blur(0px);
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  animation: gradient 20s infinite;
+ 
+  
+}
+
+@keyframes gradient{
+  0%{
+    background-image: url("./source/blutAna.png");
+      background-size: 115% 115%;
+     backdrop-filter: blur(15px); 
+    
+     
+    
+  }
+  10%{
+
+    background-image: url("./source/blutAna.png");
+      background-size :115% 115%;
+      backdrop-filter: blur(150px); 
+   
+  
+  }
+
+  
+}
+
+* {
+  font-family: "Passion One", sans-serif;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
 }
 
-.banner{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
- 
-}
-.ImgClase img{
-    width: 300px; 
-    border-radius: 50%;
-    border: solid 2px;
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.534),
-                   -5px -5px 30px rgba(15, 15, 15, 0.475);
-    transition: all 0.5s;
-    flex-grow: 1;
-    object-fit: cover;
-    transform: scale(0.9);
- 
+.cardsS {
+
+width: 100vw;
+height: 100vh;
+
+
+  /* transform: rotate(90deg); */
+
+
 }
 
-.contSocialM{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-  }
-  ul {
-    list-style: none;
-   
-  }
-  
-  .socialmedia{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-   
-   
-  }
-  .socialmedia .icon-content {
-    margin: 0 10px;
-    position: relative;
-   
-  }
-  .socialmedia  .icon-content .tooltip {
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #fff;
-    padding: 6px 10px;
-    border-radius: 5px;
-    opacity: 0;
-    visibility: hidden;
-    font-size: 14px;
-    transition: all 0.3s ease;
-   
-  }
-  .socialmedia  .icon-content:hover .tooltip {
-    opacity: 1;
-    visibility: visible;
-    top: -50px;
-  
-  }
-  .socialmedia  .icon-content a {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    color: #4d4d4d;
-    background-color: #fff;
-    transition: all 0.3s ease-in-out;
-   
-  }
-  .socialmedia  .icon-content a:hover {
-    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
-   
-  }
-  .socialmedia .icon-content a svg {
-    position: relative;
-    z-index: 1;
-    width: 30px;
-    height: 30px;
-  
-  }
-  .socialmedia  .icon-content a:hover {
-    color: white;
-  }
-  .socialmedia .icon-content a .filled {
-    position: absolute;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: #000;
-    transition: all 0.3s ease-in-out;
-  }
-  .socialmedia .icon-content a:hover .filled {
-    height: 100%;
-  }
-  
-  .socialmedia  .icon-content a[data-social="linkedin"] .filled,
-  .socialmedia .icon-content a[data-social="linkedin"] ~ .tooltip {
-    background-color: #0274b3;
-  }
-  
-  .socialmedia .icon-content a[data-social="github"] .filled,
-  .socialmedia  .icon-content a[data-social="github"] ~ .tooltip {
-    background-color: #24262a;
-  }
-  .socialmedia .icon-content a[data-social="instagram"] .filled,
-  .socialmedia  .icon-content a[data-social="instagram"] ~ .tooltip {
-    background: linear-gradient(
-      45deg,
+.banner {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+}
+
+.ImgClase img {
+  width: 300px;
+  border-radius: 50%;
+  filter: blur(10);
+  margin: auto;
+  object-fit: cover;
+  border: none;
+  background-size: cover;
+  filter: drop-shadow(0 0 30px rgba(0, 0, 0, 60));
+  box-sizing: content-box;
+
+}
+
+.contSocialM {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+
+}
+
+.socialmedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+
+
+}
+
+.socialmedia .icon-content {
+  margin: 0 10px;
+  position: relative;
+
+}
+
+.socialmedia .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+
+}
+
+.socialmedia .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+
+}
+
+.socialmedia .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.socialmedia .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+
+}
+
+.socialmedia .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+
+}
+
+.socialmedia .icon-content a:hover {
+  color: white;
+}
+
+.socialmedia .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.socialmedia .icon-content a:hover .filled {
+  height: 100%;
+}
+
+.socialmedia .icon-content a[data-social="linkedin"] .filled,
+.socialmedia .icon-content a[data-social="linkedin"]~.tooltip {
+  background-color: #0274b3;
+}
+
+.socialmedia .icon-content a[data-social="github"] .filled,
+.socialmedia .icon-content a[data-social="github"]~.tooltip {
+  background-color: #24262a;
+}
+
+.socialmedia .icon-content a[data-social="instagram"] .filled,
+.socialmedia .icon-content a[data-social="instagram"]~.tooltip {
+  background: linear-gradient(45deg,
       #405de6,
       #5b51db,
       #b33ab4,
       #c135b4,
       #e1306c,
-      #fd1f1f
-    );
-  }
+      #fd1f1f);
+}
 
-  .ImgClase img:hover{
-    transition: all 0.5s;
-    filter: blur(10);
-    margin: auto;
-    object-fit: cover;
-    border: none;
-    background-size: cover;
-        filter: drop-shadow(
-        0 0 30px rgba(0, 0, 0, 60)
-        );
-        box-sizing:content-box;
-        transform: scale(1);
-        box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
-   
+.ImgClase img:hover {
+  transition: all 0.5s;
+  filter: blur(10);
+  margin: auto;
+  object-fit: cover;
+  border: none;
+  background-size: cover;
+  filter: drop-shadow(0 0 30px rgba(0, 0, 0, 60));
+  box-sizing: content-box;
+  transform: scale(1);
+  box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
+
+}
+
+.viewmore{
+  position: absolute;
+ 
+  bottom: 20px;
+  z-index: 20;
+  filter:invert(1);
+  animation: mover 1.5s ease-in-out infinite;
+  
+}
+#viewmore1>img{
+  width: 20px;
+}
+.viewmore a{
+  text-decoration: none;
+  color: #000000;
+ 
+}
+
+.viewmorenone{
+  display: none;
+}
+
+@keyframes mover {
+  0%, 100% {
+      transform: translateY(-8px); /* Movimiento hacia arriba y hacia abajo */
+  }
+  50% {
+      transform: translateY(8px); /* Movimiento hacia arriba y hacia abajo */
+  }
+}
+/*MOUSE*/
+#punto {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.35);
+  background-size: 100%;
+  border-radius: 50%;
+  border: none;
+  z-index: 1;
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+  filter: blur(0); 
+  pointer-events: none; /* Permitir que los eventos pasen a través del punto */
 }
