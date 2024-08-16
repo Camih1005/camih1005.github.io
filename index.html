@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <div id="punto"></div>
+  <!-- <div id="punto"></div> -->
 <div id="background">
 
   <nav class="navbar navbar-expand-lg navbar bg-trans border-body fixed-top mb-5" data-bs-theme="dark">
@@ -64,7 +64,7 @@
                   fill="currentColor"></path>
               </svg>
             </a>
-            <div class="tooltip">LinkedIn</div>
+            <div class="tooltip ">LinkedIn</div>
           </li>
           <li class="icon-content">
             <a href="https://www.github.com/" aria-label="GitHub" data-social="github">
@@ -93,8 +93,8 @@
 
         </ul>
 
-        <div id="viewmore1" class="viewmorenone animate__animated animate__fadeInDown ">
-          <h5><a href="#sesion2">Bajar</a></h5>
+        <div id="viewmore1" class="viewmorenone ">
+          <h5><a href="#section2">Bajar</a></h5>
        <img src="./source/flecha-hacia-abajo-para-navegar.png" alt="flecha">
        </div>
       </section>
@@ -133,7 +133,7 @@
 
         <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" alt="bootstrap" width="50" height="50" />
 
-        <img src="https://cdn.freebiesupply.com/logos/large/2x/postgresql-inc-logo-png-transparent.png" alt="bootstrap"
+        <img src="https://cdn.freebiesupply.com/logos/large/2x/postgresql-inc-logo-png-transparent.png" alt="postgre"
           width="50" height="50" />
 
       
@@ -141,8 +141,13 @@
   </section>
 </div>
 
-<section class="container">
-
+<section id="section2" class="ca column">
+  <div class="col-sm-12 col-md-6 col-xl-6 py-4 row">
+<img src="./source/ferreteria.png" alt="">
+  </div>
+  <div class="col-sm-12 col-md-6 col-xl-6 py-4">
+    <img src="./source/ferreteria.png" alt="">
+  </div>
 </section>
 
 <script>
@@ -160,6 +165,19 @@ setTimeout(function() {
     viewmore.classList.add('viewmore');
     viewmore.classList.remove('viewmorenone');
 }, 2000);
+
+// let punto = document.getElementById("punto");
+
+//   document.body.style.cursor = 'none';
+
+ 
+//   document.addEventListener('mousemove', function(e) {
+    
+//     document.body.style.cursor = 'none';
+
+//     punto.style.left = e.clientX - punto.offsetWidth / 2 + 'px'; // Ajustar la posición X del punto 
+//     punto.style.top = e.clientY - punto.offsetHeight / 2 + 'px'; // Ajustar la posición Y del punto 
+//   });
 </script>
   <script src="./view/index.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
