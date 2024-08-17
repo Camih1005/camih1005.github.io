@@ -16,7 +16,6 @@
 
 <body>
   <!-- <div id="punto"></div> -->
-<div id="background">
 
   <nav class="navbar navbar-expand-lg navbar bg-trans border-body fixed-top mb-5" data-bs-theme="dark">
     <div  class="container-fluid">
@@ -101,7 +100,7 @@
 
 
 
-      <div class="centrado ">
+      <div class="centrado  col-xl-12">
 
 
         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
@@ -139,19 +138,25 @@
       
       </div>
   </section>
-</div>
 
-<section id="section2" class="ca column">
-  <div class="col-sm-12 col-md-6 col-xl-6 py-4 row">
-<img src="./source/ferreteria.png" alt="">
-  </div>
-  <div class="col-sm-12 col-md-6 col-xl-6 py-4">
-    <img src="./source/ferreteria.png" alt="">
+  <section class="centrado wh100vh">
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <p>CACACAS</p>
+      </div>
+      <div class="carousel-item">
+        <p>CACAFDSDFSDFCAS</p>
+      </div>
+      <div class="carousel-item">
+        <p>CACASFSDFSDFCAS</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <script>
-  let background = document.getElementById("background");
+  let background = document.querySelector("body");
 
 // Evento que sigue el movimiento del cursor
 document.addEventListener('mousemove', function(e) {
@@ -165,6 +170,18 @@ setTimeout(function() {
     viewmore.classList.add('viewmore');
     viewmore.classList.remove('viewmorenone');
 }, 2000);
+
+
+
+
+document.querySelectorAll('#nav-tab>[data-bs-toggle="tab"]').forEach(el => {
+  el.addEventListener('shown.bs.tab', () => {
+    const target = el.getAttribute('data-bs-target')
+    const scrollElem = document.querySelector(`${target} [data-bs-spy="scroll"]`)
+    bootstrap.ScrollSpy.getOrCreateInstance(scrollElem).refresh()
+  })
+})
+
 
 // let punto = document.getElementById("punto");
 
