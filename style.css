@@ -18,6 +18,10 @@
  position: absolute;
  backdrop-filter: blur(30px);
 }
+.main{
+  border: solid 2px red;
+  flex-wrap: wrap;
+}
 
 
 
@@ -68,8 +72,6 @@ body {
    background-size: 110% 140%;
    background-repeat: no-repeat;
    background-color: #1b1b1b;
-   backdrop-filter: blur(0px);
-   width: 100%;
    height: auto;
    animation: gradient 20s infinite;
     
@@ -117,6 +119,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  border: solid 2px white;
  
 }
 
@@ -321,4 +324,23 @@ body::-webkit-scrollbar-thumb {
   background-position: center;
 	border-radius: 5px;
  
+}
+@media only screen and (min-width: 360px) and (max-width: 980px) {
+  .navbar{
+    backdrop-filter: blur(1330px);
+    background: blur(10);
+  }
+
+  .boton{
+   
+    border-radius: 5px;
+    transition:0.3s ease;
+    backdrop-filter: blur(1330px);
+
+  }
+  .boton:hover{
+    background-color: #fafafa79;
+    transition:0.3s ease;
+  }
+
 }
