@@ -33,13 +33,27 @@
   text-align: center;
   vertical-align: middle;
 }
-a:hover{
+/* a:hover{
   transform: scale(1.1);
+} */
+
+.boton{
+  background-color: #4e46004b;
+  padding: 5px ;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin: 5px;
 }
 
+.boton:hover{
+  background-color: #00224e79;
+  transition: background-color 0.3s ease;
+}
 
-
-
+.navbar a:hover{
+scale: 1;
+transition: background-color 0.3s ease;
+}
 /* body{
     height: 100vh;
     background-image: url("./source/background\ humo\ verde.webp");
@@ -53,7 +67,7 @@ body {
    background-image: url("./source/blutAna.png");
    background-size: 110% 140%;
    background-repeat: no-repeat;
-   background-color: #001d5c;
+   background-color: #1b1b1b;
    backdrop-filter: blur(0px);
    width: 100%;
    height: auto;
