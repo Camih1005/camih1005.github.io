@@ -21,6 +21,7 @@
 .main{
   border: solid 2px red;
   flex-wrap: wrap;
+  height: 100vh;
 }
 
 
