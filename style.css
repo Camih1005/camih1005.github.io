@@ -271,7 +271,7 @@ ul {
 
 .viewmore{
   position: absolute;
-  bottom: 20px;
+  bottom: 100px;
   z-index: 20;
   filter:invert(1);
   animation: mover 1.5s ease-in-out infinite;
