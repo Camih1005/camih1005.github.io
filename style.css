@@ -37,11 +37,12 @@ background-color: #ff0000;
 }
 /*DISPLAY NONE*/
 
-.hidden{
+.hidden {
   display: none;
 }
-.show {
-  display: block; /* Mostrar cuando se añada la clase .show */
+
+.visible {
+  display: block;
 }
 
 /*COLORES*/

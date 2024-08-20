@@ -157,7 +157,7 @@
   </nav>
   <!-- PROYECTOS -->
 
-<div class="proyecto show container-fluid">
+<div class="proyecto container-fluid hidden">
  <h1 class="display-4 animate__animated animate__fadeInDown">Proyectos</h1>
  
  <div class="proc centrado my-5">
@@ -218,7 +218,7 @@
 
 
 <!-- ABOUT ME -->
-  <div id="aboutme" class="aboutme container-fluid hidden">
+  <div id="aboutme" class="aboutme container-fluid ">
   <h1 class="display-4 animate__animated animate__fadeInDown ">About Me</h1>
   <p class="animate__animated  animate__fadeIn">Destaco por mi rápida capacidad de aprendizaje y enfoque en el desarrollo continuo, con sólida formación en programación y habilidades en liderazgo de equipos diversos. Soy empático, extrovertido y alegre, con una gran pasión por el backend. Mi interés por las nuevas tecnologías y los avances en el sector tech me permite mantenerme actualizado y aportar ideas innovadoras. Valoro el trabajo en equipo y mi habilidad para conectar con los demás contribuye a un ambiente de trabajo colaborativo. Mi objetivo es contribuir significativamente y crecer tanto personal como profesionalmente.</p>
 
@@ -282,20 +282,59 @@ setTimeout(function() {
 
 
 
-    let aboutSection = document.getElementById("aboutme");
-    let proyectosSection = document.getElementById("section2"); // Asegúrate de que el ID es correcto
-    let aboutmeButton = document.getElementById("aboutmeB");
-    let proyectosButton = document.getElementById("proyectosB");
+// Get references to the buttons and sections
+// Get references to the buttons and sections
+// Get references to the buttons and sections
+const aboutButton = document.getElementById("aboutmeB");
+const proyectosButton = document.getElementById("proyectosB");
+const contactmeButton = document.getElementById("contactmeB");
+const opinionesButton = document.getElementById("opinionesB");
 
-    aboutmeButton.addEventListener("click", () => {
-        aboutSection.classList.add("show");
-        proyectosSection.classList.remove("show");
-    });
+const aboutSection = document.getElementById("aboutme");
+const proyectosSection = document.getElementById("proyectos");
+const contactmeSection = document.getElementById("contactme");
+const opinionesSection = document.getElementById("opiniones");
 
-    proyectosButton.addEventListener("click", () => {
-        proyectosSection.classList.add("show");
-        aboutSection.classList.remove("show");
-    });
+// Function to toggle the visibility of a section
+function toggleSectionVisibility(section) {
+  if (section.classList.contains("hidden")) {
+    section.classList.remove("hidden");
+  } else {
+    section.classList.add("hidden");
+  }
+}
+
+// Event listeners for the buttons
+aboutButton.addEventListener("click", () => {
+  toggleSectionVisibility(aboutSection);
+  proyectosSection.classList.add("hidden");
+  contactmeSection.classList.add("hidden");
+  opinionesSection.classList.add("hidden");
+});
+
+proyectosButton.addEventListener("click", () => {
+  toggleSectionVisibility(proyectosSection);
+  aboutSection.classList.add("hidden");
+  contactmeSection.classList.add("hidden");
+  opinionesSection.classList.add("hidden");
+});
+
+contactmeButton.addEventListener("click", () => {
+  toggleSectionVisibility(contactmeSection);
+  aboutSection.classList.add("hidden");
+  proyectosSection.classList.add("hidden");
+  opinionesSection.classList.add("hidden");
+});
+
+opinionesButton.addEventListener("click", () => {
+  toggleSectionVisibility(opinionesSection);
+  aboutSection.classList.add("hidden");
+  proyectosSection.classList.add("hidden");
+  contactmeSection.classList.add("hidden");
+});
+
+
+// Función para ocultar todas las secciones
 
 
 
