@@ -8,10 +8,23 @@
   width: 100vh;
   height: 100vh;
 }
+/*NAV*/
 
  .navbar{
   position:absolute;
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  
+
 }  
+.navbar a {
+color: white;
+font-size:x-large;
+
+}
+
+
 
 .blur1 {
  z-index: 1;
@@ -19,12 +32,54 @@
  backdrop-filter: blur(30px);
 }
 .main{
-  border: solid 2px red;
+  border: solid 2px rgba(255, 0, 0, 0);
   flex-wrap: wrap;
   height: 100vh;
 }
 
+.desplegue{
 
+}
+/*ABOUT ME*/
+.aboutme{
+border: solid 2px rgba(0, 0, 0, 0);
+  color: rgb(245, 241, 0);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 60px;
+}
+.aboutme>p{
+  font-size: 21px;
+  color: rgb(255, 255, 255);
+}
+.HV{
+  display: flex;
+  justify-content: center;
+  
+
+}
+
+
+.H{
+  top: 200px;
+  position: relative;
+  margin: 0.5px;
+  padding: 5px;
+  background-color: #125c006b;
+  border: solid 2px rgba(255, 255, 255, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0px 400px 0px 400px; */
+ 
+}
+.H2{
+  background-color: #64030048;
+}
+.HV a{
+  color: #ffd900e0;
+  font-size: x-large;
+}
 
 
 /*ESPACIOS*/
@@ -59,32 +114,20 @@
 scale: 1;
 transition: background-color 0.3s ease;
 }
-/* body{
-    height: 100vh;
-    background-image: url("./source/background\ humo\ verde.webp");
-    background-size:contain;
-    margin: 0; 
-    overflow: hidden; 
-    backdrop-filter: blur(60px); 
-    /* cursor: none;  */
+
 body {
    /* background-color: rgba(1, 8, 34, 0.993);  */
    background-image: url("./source/blutAna.png");
-   background-size: 110% 140%;
+   background: fixed;
+   background-size: 100% 140%;
    background-repeat: no-repeat;
-   background-color: #1b1b1b;
+   background-color: #202020;
    height: auto;
    animation: gradient 20s infinite;
     
    
 
 }
-/* #background {
-  position: absolute;
- 
- 
-  
-} */
 
 @keyframes gradient{
   0%{
@@ -95,7 +138,7 @@ body {
      
     
   }
-  10%{
+  100%{
 
     background-image: url("./source/blutAna.png");
       background-size :115% 115%;
@@ -113,15 +156,39 @@ body {
   font-style: normal;
   text-decoration: none;
 
+
+}
+a{
+  text-decoration: none; 
 }
 
-
 .banner {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  border: solid 2px white;
  
+  height: 100vh;
+  border: solid 2px rgba(255, 255, 255, 0.623);
+  border-radius: 10px;
+ 
+}
+
+.viewmore{
+  position: absolute;
+  bottom: 80px;
+  z-index: 20;
+  filter:invert(1);
+  animation: mover 1.5s ease-in-out infinite;
+  
+}
+#viewmore1>img{
+  width: 20px;
+}
+.viewmore a{
+  text-decoration: none;
+  color: #000000;
+ 
+}
+
+.viewmorenone{
+  display: none;
 }
 
 
@@ -268,27 +335,10 @@ ul {
   box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
 
 }
-
-.viewmore{
-  position: absolute;
-  bottom: 100px;
-  z-index: 20;
-  filter:invert(1);
-  animation: mover 1.5s ease-in-out infinite;
-  
-}
-#viewmore1>img{
-  width: 20px;
-}
-.viewmore a{
-  text-decoration: none;
-  color: #000000;
- 
-}
-
-.viewmorenone{
+ .hiddenxl{
   display: none;
-}
+} 
+
 
 @keyframes mover {
   0%, 100% {
@@ -298,20 +348,7 @@ ul {
       transform: translateY(8px); /* Movimiento hacia arriba y hacia abajo */
   }
 }
-/*MOUSE*/
-/* #punto {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: rgba(0, 0, 0, 0.219);
-  border-radius: 10%;
-  border: none;
-  z-index: 1;
-  box-shadow: 0 0 20px rgb(5, 1, 252);
-  filter: blur(0); 
-  pointer-events: none;
-  z-index: 100; /* Permitir que los eventos pasen a través del punto */
- */
+
 
 /*SCROLL*/
 body::-webkit-scrollbar {
@@ -327,6 +364,9 @@ body::-webkit-scrollbar-thumb {
  
 }
 @media only screen and (min-width: 360px) and (max-width: 980px) {
+  .hiddenxl{
+    display: block;
+  } 
   .navbar{
     backdrop-filter: blur(1330px);
     background: blur(10);
@@ -343,5 +383,48 @@ body::-webkit-scrollbar-thumb {
     background-color: #fafafa79;
     transition:0.3s ease;
   }
+
+  .navbar{
+    width: 90%;
+   
+  }
+  .navbar a {
+    color: white;
+    font-size:larger;
+    
+    } 
+
+    /*nav bar*/
+
+.aboutme{
+  height: 100%;
+  
+
+  }
+  .aboutme p{
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  
+}.desplegue{
+  background: fixed;
+  height: 100vh;
+}
+
+
+.H{
+  top: 0px;
+  position: relative;
+  margin: 0.5px;
+  padding: 5px;
+  background-color: #125c006b;
+  border: solid 2px rgba(255, 255, 255, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0px 400px 0px 400px; */
+ 
+}
 
 }
