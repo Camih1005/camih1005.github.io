@@ -27,6 +27,7 @@ font-size:x-large;
 #section2{
   border: solid 2px rgba(255, 255, 255, 0.644);
   border-radius: 10px;
+  height: 97%;
 }
 
 .blur1 {
@@ -38,6 +39,7 @@ font-size:x-large;
   border: solid 2px rgba(255, 0, 0, 0);
   flex-wrap: wrap;
   height: 100vh;
+  padding: 0;
 
 }
 
@@ -137,12 +139,12 @@ body {
    /* background-color: rgba(1, 8, 34, 0.993);  */
    background-image: url("./source/blutAna.png");
    background: fixed;
-   background-size: 100% 140%;
+ 
    background-repeat: no-repeat;
    background-color: #202020;
    height: auto;
    animation: gradient 20s infinite;
-    padding: 20px;
+    padding: 15px;
    
 
 }
@@ -182,9 +184,10 @@ a{
 
 .banner {
  
-  height: 100vh;
+  height: 96.5vh;
   border: solid 2px rgba(255, 255, 255, 0.623);
   border-radius: 10px;
+  
  
 }
 
@@ -403,7 +406,7 @@ body::-webkit-scrollbar-thumb {
   }
 
   .navbar{
-    width: 90%;
+    width: 80%;
    
   }
   .navbar a {
