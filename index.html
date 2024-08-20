@@ -34,10 +34,13 @@
       </div>
     </div>
   </nav> -->
-
+ <!-- Pantalla de carga -->
+ <div id="preloader">
+  <div class="spinner"></div>
+</div>
   
 
-<div class="container-fluid centrado bg-trans main d-flex gap-4 ">
+<div class="container-fluid centrado bg-trans main d-flex gap-4 " id="content" style="display: none;">
   <section class="banner col-sm-12 col-md-12 col-xl-3 py-4 animate__animated animate__fadeIn  ">
 
     <h1 class=" display-4 text-yellow animate__animated animate__fadeInDown">SOFTWARE DEVELOPER</h1>
@@ -206,14 +209,24 @@ setTimeout(function() {
 }, 2000);
 
 
-
-
 const myCarouselElement = document.querySelector('#carousel')
 
 const carousel = new bootstrap.Carousel(myCarouselElement, {
   interval:1000,
   touch: false
-})
+});
+
+window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    preloader.style.opacity = '0';
+    setTimeout(() => {
+        preloader.style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+    }, 500);
+});
+
+
+
 
 // let punto = document.getElementById("punto");
 
