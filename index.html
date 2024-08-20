@@ -150,14 +150,21 @@
     
     <button id="aboutmeB" class="btn">About me</button>
         <button id="proyectosB" class="btn">Proyectos</button>
+        <button id="experienciaB" class="btn">Experiencia</button>
         <button id="contactmeB" class="btn">Contactarme</button>
-        <button id="opinionesB" class="btn">Opiniones</button>
-    
-
+     
   </nav>
+
+  <!-- Experiencia -->
+ <div class="experiencia  ">
+<h1 class="display-4">Experiencia</h1>
+
+</div> 
+
+
   <!-- PROYECTOS -->
 
-<div class="proyecto container-fluid ">
+<div class="proyecto container-fluid hidden ">
  <h1 class="display-4 animate__animated animate__fadeInDown">Proyectos</h1>
  
  <div class="proc centrado my-5">
@@ -260,112 +267,9 @@
  </section>
 </div>
 
-
+<script src="./view/index.js" defer></script>
 <script>
-  let background = document.querySelector("body");
-
-// Evento que sigue el movimiento del cursor
-document.addEventListener('mousemove', function(e) {
-  let posX = (e.clientX / window.innerWidth) * 15; // Posición X relativa al ancho de la ventana
-  let posY = (e.clientY / window.innerHeight) * 15; // Posición Y relativa al alto de la ventana
-  background.style.backgroundPosition = posX + '% ' + posY + '%'; // Establecer la posición de fondo relativa al cursor
-});
-
-setTimeout(function() {
-    let viewmore = document.querySelector('#viewmore1');
-    viewmore.classList.add('viewmore');
-    viewmore.classList.remove('viewmorenone');
-}, 2000);
-
-
-
-
-
-
-// Get references to the buttons and sections
-// Get references to the buttons and sections
-// Get references to the buttons and sections
-const aboutButton = document.getElementById("aboutmeB");
-const proyectosButton = document.getElementById("proyectosB");
-const contactmeButton = document.getElementById("contactmeB");
-const opinionesButton = document.getElementById("opinionesB");
-
-const aboutSection = document.getElementById("aboutme");
-const proyectosSection = document.getElementById("proyectos");
-const contactmeSection = document.getElementById("contactme");
-const opinionesSection = document.getElementById("opiniones");
-
-// Function to toggle the visibility of a section
-function toggleSectionVisibility(section) {
-  if (section.classList.contains("hidden")) {
-    section.classList.remove("hidden");
-  } else {
-    section.classList.add("hidden");
-  }
-}
-
-// Event listeners for the buttons
-aboutButton.addEventListener("click", () => {
-  toggleSectionVisibility(aboutSection);
-  proyectosSection.classList.add("hidden");
-  contactmeSection.classList.add("hidden");
-  opinionesSection.classList.add("hidden");
-});
-
-proyectosButton.addEventListener("click", () => {
-  toggleSectionVisibility(proyectosSection);
-  aboutSection.classList.add("hidden");
-  contactmeSection.classList.add("hidden");
-  opinionesSection.classList.add("hidden");
-});
-
-contactmeButton.addEventListener("click", () => {
-  toggleSectionVisibility(contactmeSection);
-  aboutSection.classList.add("hidden");
-  proyectosSection.classList.add("hidden");
-  opinionesSection.classList.add("hidden");
-});
-
-opinionesButton.addEventListener("click", () => {
-  toggleSectionVisibility(opinionesSection);
-  aboutSection.classList.add("hidden");
-  proyectosSection.classList.add("hidden");
-  contactmeSection.classList.add("hidden");
-});
-
-
-// Función para ocultar todas las secciones
-
-
-
-// window.addEventListener("load", function() {
-//       // Cuando la página ha terminado de cargar, oculta el preloader
-//       setTimeout(() => {
-//         const spinnerWrapper = document.querySelector(".spiner-wrapper");
-//         if (spinnerWrapper) {
-//           spinnerWrapper.style.opacity = '0';
-//           // Después de que la transición de opacidad termine, oculta el preloader completamente
-//           setTimeout(() => {
-//             spinnerWrapper.style.display = 'none';
-//             document.getElementById("content").style.display = 'block';
-//           }, 200); // Debe coincidir con la duración de la transición
-//         }
-//       }, 500); // Tiempo de espera antes de ocultar el preloader
-//     });
-
-
-// let punto = document.getElementById("punto");
-
-//   document.body.style.cursor = 'none';
-
- 
-//   document.addEventListener('mousemove', function(e) {
-    
-//     document.body.style.cursor = 'none';
-
-//     punto.style.left = e.clientX - punto.offsetWidth / 2 + 'px'; // Ajustar la posición X del punto 
-//     punto.style.top = e.clientY - punto.offsetHeight / 2 + 'px'; // Ajustar la posición Y del punto 
-//   });
+  
 </script>
   <script src="./view/index.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
