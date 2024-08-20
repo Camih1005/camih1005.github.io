@@ -5,8 +5,8 @@
   color: #fbff00ef;
 }
 .wh100vh{
-  width: 100vh;
-  height: 100vh;
+  width: 100dvh;
+  height: 100dvh;
 }
 /*NAV*/
 
@@ -38,7 +38,7 @@ font-size:x-large;
 .main{
   border: solid 2px rgba(255, 0, 0, 0);
   flex-wrap: wrap;
-  height: 100vh;
+  height: 100dvh;
   padding: 0;
 
 }
@@ -184,7 +184,7 @@ a{
 
 .banner {
  
-  height: 96.5vh;
+  height: 96.5dvh;
   border: solid 2px rgba(255, 255, 255, 0.623);
   border-radius: 10px;
   
@@ -430,7 +430,7 @@ body::-webkit-scrollbar-thumb {
   
 }.desplegue{
   background: fixed;
-  height: 100vh;
+  height: 100dvh;
 }
 
 
