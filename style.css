@@ -1,5 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
 
+#accordionExample{
+background-color: #ff0000;
+}
+.text-white{
+  color: white;
+}
+.bg-blur{
+
+   background-color: rgba(36, 38, 42, 0.3); /* Color de fondo con opacidad */
+   backdrop-filter: blur(10px); /* Desenfoque del fondo */
+   -webkit-backdrop-filter: blur(10px); /* Soporte para navegadores WebKit como Safari */
+   border-radius: 10px; /* Opcional: Bordes redondeados para un efecto más suave */
+  
+ 
+
+}
+.proyecto{
+  border: solid 2px rgba(255, 255, 255, 0);
+  color: rgb(245, 241, 0);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 60px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.proc{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+/*DISPLAY NONE*/
+
+.hidden{
+  display: none;
+}
+
 /*COLORES*/
 .text-yellow {
   color: #fbff00ef;
@@ -387,34 +427,9 @@ body::-webkit-scrollbar-thumb {
 /*PRECARGA*/
 
 /* Estilo para la pantalla de carga */
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #1900ff70;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
 
-/* Estilo para el spinner */
-.spinner {
-  border: 16px solid #f3f3f3; /* Color de fondo */
-  border-top: 16px solid #cadb34; /* Color de la animación */
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 1s linear infinite;
-  background-color: #001d5c;
-}
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
+
 
 
 @media only screen and (min-width: 360px) and (max-width: 980px) {
@@ -486,6 +501,29 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   color: aliceblue;
   top: 15%;
+  }
+
+  /* .spiner-wrapper{
+    background-color: #74747431;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.2s;
+  }
+  
+  .spinner-border{
+    height: 60px;
+    width: 60px;
+  
+  } */
+  .proc{
+    overflow: scroll;
   }
 
 }
