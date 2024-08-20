@@ -37,8 +37,8 @@
 
   
 
-<div class="container-fluid centrado bg-trans  main">
-  <section class="banner col-sm-12 col-md-12 col-xl-3 py-4 animate__animated animate__fadeIn">
+<div class="container-fluid centrado bg-trans main">
+  <section class="banner col-sm-12 col-md-12 col-xl-3 py-4 animate__animated animate__fadeIn ">
 
     <h1 class=" display-4 text-yellow animate__animated animate__fadeInDown">SOFTWARE DEVELOPER</h1>
     <H2 class=" text-white  animate__animated animate__fadeInUp">Camilo Hernandez Torres</H2>
@@ -139,7 +139,7 @@
       </div>
   </section>
 
- <section id="section2" class="col-sm-12 col-md-12 col-xl-9 desplegue centrado">
+ <section id="section2" class="col-sm-12 col-md-12 col-xl-9 desplegue centrado ">
   <nav class="navbar animate__animated animate__bounceInRight">
   
     <a href="">About me</a>
@@ -172,19 +172,29 @@
       </div>
     
     </div>
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleSlidesOnly" class="carousel slide carouselC" data-bs-ride="carousel" data-bs-interval="2500">
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <a href="">asasas</a>
-        </div>
-        <div class="carousel-item">
-          <a href="">asasas</a>
-        </div>
-        <div class="carousel-item">
-          <a href="">asasas</a>
-        </div>
+          <div class="carousel-item active ">
+              <p>Analizador &#128373;</p>
+    
+          </div>
+          <div class="carousel-item ">
+            <p>Trabajo en equipo  &#129730;</p>
+          </div>
+          <div class="carousel-item ">
+            <p>Ingenioso &#128161;</p>
+          </div>
+          <div class="carousel-item ">
+            <p>Servicial &#128588;</p>
+          </div>
+          <div class="carousel-item ">
+            <p>Colaborativo &#128640;</p>
+          </div>
+          <div class="carousel-item ">
+            <p>Visionario &#128760;</p>
+          </div>
       </div>
-    </div>
+  </div>
  </section>
 </div>
 <script>
@@ -206,14 +216,12 @@ setTimeout(function() {
 
 
 
-document.querySelectorAll('#nav-tab>[data-bs-toggle="tab"]').forEach(el => {
-  el.addEventListener('shown.bs.tab', () => {
-    const target = el.getAttribute('data-bs-target')
-    const scrollElem = document.querySelector(`${target} [data-bs-spy="scroll"]`)
-    bootstrap.ScrollSpy.getOrCreateInstance(scrollElem).refresh()
-  })
-})
+const myCarouselElement = document.querySelector('#carousel')
 
+const carousel = new bootstrap.Carousel(myCarouselElement, {
+  interval:1000,
+  touch: false
+})
 
 // let punto = document.getElementById("punto");
 
