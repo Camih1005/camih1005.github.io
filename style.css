@@ -26,6 +26,9 @@ background-color: #ff0000;
   flex-direction: column;
 
 }
+.aboutme.show {
+  display: block; /* Mostrar cuando se añada la clase .show */
+}
 
 .proc{
   display: flex;
@@ -36,6 +39,9 @@ background-color: #ff0000;
 
 .hidden{
   display: none;
+}
+.show {
+  display: block; /* Mostrar cuando se añada la clase .show */
 }
 
 /*COLORES*/

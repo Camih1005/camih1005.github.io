@@ -148,16 +148,16 @@
   <nav class="navbar animate__animated animate__bounceInRight">
   
     
-    <button class="btn">About me</button>
-    <button class="btn">Proyectos</button>
-    <button class="btn">Contactarme</button>
-    <button class="btn">Opiniones</button>
+    <button id="aboutmeB" class="btn">About me</button>
+        <button id="proyectosB" class="btn">Proyectos</button>
+        <button id="contactmeB" class="btn">Contactarme</button>
+        <button id="opinionesB" class="btn">Opiniones</button>
     
 
   </nav>
   <!-- PROYECTOS -->
 
-<div class="proyecto container-fluid">
+<div class="proyecto show container-fluid">
  <h1 class="display-4 animate__animated animate__fadeInDown">Proyectos</h1>
  
  <div class="proc centrado my-5">
@@ -218,7 +218,7 @@
 
 
 <!-- ABOUT ME -->
-  <div class="aboutme container-fluid hidden">
+  <div id="aboutme" class="aboutme container-fluid hidden">
   <h1 class="display-4 animate__animated animate__fadeInDown ">About Me</h1>
   <p class="animate__animated  animate__fadeIn">Destaco por mi rápida capacidad de aprendizaje y enfoque en el desarrollo continuo, con sólida formación en programación y habilidades en liderazgo de equipos diversos. Soy empático, extrovertido y alegre, con una gran pasión por el backend. Mi interés por las nuevas tecnologías y los avances en el sector tech me permite mantenerme actualizado y aportar ideas innovadoras. Valoro el trabajo en equipo y mi habilidad para conectar con los demás contribuye a un ambiente de trabajo colaborativo. Mi objetivo es contribuir significativamente y crecer tanto personal como profesionalmente.</p>
 
@@ -278,21 +278,24 @@ setTimeout(function() {
 }, 2000);
 
 
-const myCarouselElement = document.querySelector('#carousel')
-
-const carousel = new bootstrap.Carousel(myCarouselElement, {
-  interval:1000,
-  touch: false
-});
-
-let about = document.querySelector(".aboutme")
-let aboutmeBoton = document.getElementById("aboutmeB")
-aboutmeBoton.addEventListener("click",()=>{
-about.style.display = "flex"
-})
 
 
 
+
+    let aboutSection = document.getElementById("aboutme");
+    let proyectosSection = document.getElementById("section2"); // Asegúrate de que el ID es correcto
+    let aboutmeButton = document.getElementById("aboutmeB");
+    let proyectosButton = document.getElementById("proyectosB");
+
+    aboutmeButton.addEventListener("click", () => {
+        aboutSection.classList.add("show");
+        proyectosSection.classList.remove("show");
+    });
+
+    proyectosButton.addEventListener("click", () => {
+        proyectosSection.classList.add("show");
+        aboutSection.classList.remove("show");
+    });
 
 
 
