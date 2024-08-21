@@ -631,7 +631,23 @@ body::-webkit-scrollbar-thumb {
     overflow: scroll;
     padding-top: 70px;
   }
+
+  .proc::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  .proc::-webkit-scrollbar-thumb {
+    background-color: #001d5c;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+   
+  }
 .button{
-  font-size: 18px;
+  font-size: 15px;
+}
+.banner{
+  border-color: #00000000;
 }
 }
