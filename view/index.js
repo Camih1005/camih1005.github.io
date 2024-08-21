@@ -4,8 +4,8 @@ let background = document.querySelector("body");
 
 // Evento que sigue el movimiento del cursor
 document.addEventListener('mousemove', function(e) {
-  let posX = (e.clientX / window.innerWidth) * 15; // Posición X relativa al ancho de la ventana
-  let posY = (e.clientY / window.innerHeight) * 15; // Posición Y relativa al alto de la ventana
+  let posX = (e.clientX / window.innerWidth) * 10; // Posición X relativa al ancho de la ventana
+  let posY = (e.clientY / window.innerHeight) * 10; // Posición Y relativa al alto de la ventana
   background.style.backgroundPosition = posX + '% ' + posY + '%'; // Establecer la posición de fondo relativa al cursor
 });
 
