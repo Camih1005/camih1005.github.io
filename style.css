@@ -354,18 +354,6 @@ a{
 }
 
 
-.ImgClase img {
-  width: 300px;
-  border-radius: 50%;
-  filter: blur(10);
-  margin: auto;
-  object-fit: cover;
-  border: none;
-  background-size: cover;
-  filter: drop-shadow(0 0 30px rgba(0, 0, 0, 60));
-  box-sizing: content-box;
- 
-}
 
 .contSocialM {
   display: flex;
@@ -484,6 +472,20 @@ ul {
       #fd1f1f);
 }
 
+.ImgClase img {
+  width: 300px;
+  border-radius: 50%;
+  filter: blur(10);
+  z-index: 10;
+  transition: all ease-in 0.3s;
+  filter: drop-shadow(0 0 60px rgba(0, 46, 88, 0.562));
+  object-fit: cover;
+  border: none;
+  background-size: cover;
+  box-sizing: content-box;
+}
+
+
 .ImgClase img:hover {
   transition: all 0.5s;
   filter: blur(10);
@@ -491,7 +493,7 @@ ul {
   object-fit: cover;
   border: none;
   background-size: cover;
-  filter: drop-shadow(0 0 30px rgba(0, 0, 0, 60));
+  filter: drop-shadow(0 0 30px rgba(0, 46, 88, 0.562));
   box-sizing: content-box;
   transform: scale(1);
   box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
