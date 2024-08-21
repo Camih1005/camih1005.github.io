@@ -5,6 +5,13 @@
   position: absolute;
   background-color: #000000;
 }
+.section-content {
+  display: none;
+}
+
+.section-content.active {
+  display: block;
+}
 
 .contacto{
   border: solid 2px rgba(255, 255, 255, 0);
@@ -1063,7 +1070,7 @@ img,
 h1,
 navbar,
 form,
-p,
+p,.dsd,
 .footer1 {
   view-timeline-name: --image;
   view-timeline-axis: block;

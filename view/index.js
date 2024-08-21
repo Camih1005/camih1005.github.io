@@ -1,50 +1,43 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // alert("ya cargo")
-let background = document.querySelector("body");
-
-// Evento que sigue el movimiento del cursor
-document.addEventListener('mousemove', function(e) {
-  let posX = (e.clientX / window.innerWidth) * 10; // Posición X relativa al ancho de la ventana
-  let posY = (e.clientY / window.innerHeight) * 10; // Posición Y relativa al alto de la ventana
-  background.style.backgroundPosition = posX + '% ' + posY + '%'; // Establecer la posición de fondo relativa al cursor
-});
-
-
-/*function showSection(sectionId) {
-  // Obtener todas las secciones
-  const sections = document.querySelectorAll('.mision, .vision');
+  // Definición de las variables
   
-  // Ocultar todas las secciones
-  sections.forEach(section => {
-      section.classList.add('hidden');
-  });
+  let abt = document.getElementById('aboutmeB');
+  let exp = document.getElementById('experienciaB');
+  let cont = document.getElementById('contactoB');
   
-  // Mostrar la sección seleccionada
-  const sectionToShow = document.getElementById(sectionId);
-  sectionToShow.classList.remove('hidden');
-}*/
-const aboutmeb = document.getElementById("aboutmeB");
-  const experienciab = document.getElementById("experienciaB");
-  const contactob = document.getElementById("contactoB");
+  let secAbt = document.getElementById("aboutme");
+  let secExp = document.getElementById("proyecto");
+  let secCont = document.getElementById("contacto");
 
-  const aboutSec = document.querySelector(".aboutme");
-  const experienciaSec = document.querySelector(".proyecto");
-  const contactoSec = document.querySelector(".contacto");
+  // Función para ocultar todas las secciones
+  function ocultarTodasLasSecciones() {
+      secAbt.classList.add('hidden');
+      secExp.classList.add('hidden');
+      secCont.classList.add('hidden');
+  }
+  
+  // Función para mostrar una sección específica
+  function mostrarSeccion(seccion) {
+      ocultarTodasLasSecciones();
+      seccion.classList.remove('hidden');
+  }
 
-  // Agregar event listeners
-  aboutmeb.addEventListener("click", () => {
-    aboutSec.classList.toggle("hidden");
-  });
+  // Eventos de los botones
+  abt.addEventListener("click", () => mostrarSeccion(secAbt));
+  exp.addEventListener("click", () => mostrarSeccion(secExp));
+  cont.addEventListener("click", () => mostrarSeccion(secCont));
+  
+  // Mostrar la sección "Aboutme" por defecto al cargar la página
+  mostrarSeccion(secAbt);
 
-  experienciab.addEventListener("click", () => {
-    experienciaSec.classList.toggle("hidden");
-  });
-
-  contactob.addEventListener("click", () => {
-    contactoSec.classList.toggle("hidden");
+  // Movimiento del cursor para fondo
+  let background = document.querySelector("body");
+  document.addEventListener('mousemove', function(e) {
+      let posX = (e.clientX / window.innerWidth) * 10; // Posición X relativa al ancho de la ventana
+      let posY = (e.clientY / window.innerHeight) * 10; // Posición Y relativa al alto de la ventana
+      background.style.backgroundPosition = posX + '% ' + posY + '%'; // Establecer la posición de fondo relativa al cursor
   });
 });
-
 
 // Función para ocultar todas las secciones
 
