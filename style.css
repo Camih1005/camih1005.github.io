@@ -1,15 +1,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.inside{
+  position: absolute;
+}
 
 .accordion{
-  --bs-accordion-active-bg: yellow; 
+  --bs-accordion-active-bg: rgba(63, 63, 63, 0.082); 
 
 }
 .accordion-item{
-  background-color: #001d5c;
+  background-color: #001d5c18;
 }
 .accordion-button{
-  background-color: #0274b3;
+  background-color: #0249b30c;
+  color: white;
 }
 /*FORMULARIO*/
 .acordion{
