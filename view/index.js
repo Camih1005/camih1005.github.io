@@ -9,19 +9,40 @@ document.addEventListener('mousemove', function(e) {
   background.style.backgroundPosition = posX + '% ' + posY + '%'; // Establecer la posición de fondo relativa al cursor
 });
 
-setTimeout(function() {
-    let viewmore = document.querySelector('#viewmore1');
-    viewmore.classList.add('viewmore');
-    viewmore.classList.remove('viewmorenone');
-}, 1500);
 
-
-
-
-
-
-
+/*function showSection(sectionId) {
+  // Obtener todas las secciones
+  const sections = document.querySelectorAll('.mision, .vision');
   
+  // Ocultar todas las secciones
+  sections.forEach(section => {
+      section.classList.add('hidden');
+  });
+  
+  // Mostrar la sección seleccionada
+  const sectionToShow = document.getElementById(sectionId);
+  sectionToShow.classList.remove('hidden');
+}*/
+const aboutmeb = document.getElementById("aboutmeB");
+  const experienciab = document.getElementById("experienciaB");
+  const contactob = document.getElementById("contactoB");
+
+  const aboutSec = document.querySelector(".aboutme");
+  const experienciaSec = document.querySelector(".proyecto");
+  const contactoSec = document.querySelector(".contacto");
+
+  // Agregar event listeners
+  aboutmeb.addEventListener("click", () => {
+    aboutSec.classList.toggle("hidden");
+  });
+
+  experienciab.addEventListener("click", () => {
+    experienciaSec.classList.toggle("hidden");
+  });
+
+  contactob.addEventListener("click", () => {
+    contactoSec.classList.toggle("hidden");
+  });
 });
 
 
