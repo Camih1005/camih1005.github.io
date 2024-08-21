@@ -1,7 +1,149 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*FORMULARIO*/
+.contacto{
+  border: solid 2px rgba(255, 255, 255, 0);
+  color: rgb(245, 241, 0);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column; 
+}
+
+form {
+  background-color: #3d3e46;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  margin: 50px auto;
+}
+
+.lb {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #b8b8b8;
+}
+
+.infos[type="text"], input[type="email"], input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  background-color: #333333;
+  color: white;
+}
+
+#send {
+  --glow-color: rgb(176, 255, 189);
+  --glow-spread-color: rgba(235, 255, 123, 0.781);
+  --enhanced-glow-color: rgb(182, 175, 71);
+  --btn-color: rgba(231, 247, 0, 0.459);
+  border: .25em solid var(--glow-color);
+  padding: 1em 2em;
+  color: var(--glow-color);
+  font-size: 14px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .05em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+}
+
+#send::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+#send:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+}
+
+#send:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
+
+#limpar {
+  --glow-color: rgb(139, 166, 255);
+  --glow-spread-color: rgba(44, 110, 252, 0.781);
+  --enhanced-glow-color: rgb(182, 175, 71);
+  --btn-color: rgba(66, 140, 252, 0.247);
+  border: .25em solid var(--glow-color);
+  padding: 1em 2em;
+  color: var(--glow-color);
+  font-size: 14px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .05em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+}
+
+#limpar::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+#limpar:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+}
+
+#limpar:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
+/*OPINION*/
+/* From Uiverse.io by boryanakrasteva */ 
+.btn {
+ display: none;
+}
+
+
+
 /*HOJA DE VIDA DOWLOAD*/
-/* From Uiverse.io by InfinityLoopGames */ 
+
 .glowbutton {
   --glow-color: rgb(207, 228, 255);
   --glow-spread-color: rgba(123, 176, 255, 0.781);
@@ -85,8 +227,7 @@
   box-shadow: 10px 10px 132px -9px rgba(0, 60, 172, 0.425);
   overflow: hidden;
 }
-/* From Uiverse.io by satyamchaudharydev */ 
-/* === removing default button style ===*/
+
 .button {
   margin: 0;
   height: auto;
@@ -96,7 +237,6 @@
   cursor: pointer;
 }
 
-/* button styling */
 .button {
   --border-right: 4px;
   --text-stroke-color: rgba(252, 252, 252, 0.6);
@@ -111,7 +251,7 @@
   color: transparent;
   -webkit-text-stroke: 1px var(--text-stroke-color);
 }
-/* this is the text, when you hover on button */
+
 .hover-text {
   position: absolute;
   box-sizing: border-box;
@@ -202,6 +342,9 @@ background-color: #ff0000;
 /*DISPLAY NONE*/
 
 .hidden {
+  display: none;
+}
+.header{
   display: none;
 }
 
@@ -338,7 +481,7 @@ background-color: rgb(255, 217, 0);
 
 body {
    /* background-color: rgba(1, 8, 34, 0.993);  */
-   background-image: url("./source/blutAna.png");
+   
    background: fixed;
  
    background-repeat: no-repeat;
@@ -656,8 +799,14 @@ body::-webkit-scrollbar-thumb {
 }.desplegue{
   background: fixed;
   height: 100dvh;
+  
 }
 
+#section2{
+  z-index: 999;
+  background-color: #202020;
+
+}
 
 .H{
   top: 0px;
@@ -725,5 +874,88 @@ body::-webkit-scrollbar-thumb {
 .lenguajes>img{
   width: 30px;
  
+}
+
+.viewmorenone{
+  display: none;
+}
+.header>h1{
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.btn {
+  z-index: 1;
+  width: 30px;
+  height: 50px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  outline: 2px solid rgb(105, 127, 255);
+  box-shadow: 0px 0px 10px rgb(105, 127, 255);
+  position:fixed;
+  bottom: 100px;
+  z-index: 9999;
+  
+}
+
+.scroll {
+  width: 5px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: rgb(105, 127, 255);
+  box-shadow: 0px 0px 10px rgb(105, 127, 255);
+  animation: scroll_4013 2s linear infinite;
+  transform: translateY(40%);
+}
+
+.btn:after {
+  content: 'scroll';
+  position: absolute;
+  top: 140%;
+  color: whitesmoke;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+@keyframes scroll_4013 {
+  0% {
+    transform: translateY(40%);
+  }
+
+  50% {
+    transform: translateY(90%);
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+img,
+.container,
+h1,
+.navbar,
+form,
+p,
+.footer1 {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+
+  animation-timeline: --image;
+  animation-name: show;
+  animation-range: entry 1% cover 30%;
+  animation-fill-mode: both;
 }
 }

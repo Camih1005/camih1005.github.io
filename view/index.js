@@ -13,7 +13,7 @@ setTimeout(function() {
     let viewmore = document.querySelector('#viewmore1');
     viewmore.classList.add('viewmore');
     viewmore.classList.remove('viewmorenone');
-}, 2000);
+}, 1500);
 
 
 
