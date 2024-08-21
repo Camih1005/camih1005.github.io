@@ -533,7 +533,7 @@ body::-webkit-scrollbar-thumb {
 
 
 
-@media only screen and (min-width: 360px) and (max-width: 1020px) {
+@media only screen and (min-width: 300px) and (max-width: 1020px) {
   .hiddenxl{
     display: block;
   } 
@@ -645,7 +645,7 @@ body::-webkit-scrollbar-thumb {
    
   }
 .button{
-  font-size: 15px;
+  font-size: 12px;
 }
 .banner{
   border-color: #00000000;
