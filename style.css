@@ -63,6 +63,13 @@
   text-shadow: 0 0 30px rgba(248, 248, 3);
   border-radius: 10px;
 }
+.aC{
+  color: #ffffffbd;
+  padding: 0px 3px 0px 3px;
+  font-weight:400;
+  text-shadow: 0 0 30px rgba(92, 174, 252, 0.452);
+  border-radius: 10px;
+}
 
 /*experiencia hover*/
 
@@ -660,7 +667,7 @@ body::-webkit-scrollbar-thumb {
   font-size: xx-large;
   position: relative;
   color: aliceblue;
-  top: 15%;
+  top: 5%;
   }
 
   /* .spiner-wrapper{
