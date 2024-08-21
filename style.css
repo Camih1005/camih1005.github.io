@@ -395,7 +395,7 @@ a{
 .viewmore{
   position: absolute;
   bottom: 100px;
-  z-index: 20;
+  z-index: 9999;
   filter:invert(1);
   animation: mover 1.5s ease-in-out infinite;
   
@@ -406,6 +406,7 @@ a{
 .viewmore a{
   text-decoration: none;
   color: #000000;
+  z-index: 100;
  
 }
 
@@ -546,6 +547,7 @@ ul {
 }
 
 
+
 .ImgClase img:hover {
   transition: all 0.5s;
   filter: blur(10);
@@ -572,7 +574,15 @@ ul {
       transform: translateY(8px); /* Movimiento hacia arriba y hacia abajo */
   }
 }
+/*LENGUAJES*/
 
+.lenguajes>img{
+  width: 45px;
+ 
+}
+.lenguajes{
+  margin: 40px;
+}
 
 /*SCROLL*/
 body::-webkit-scrollbar {
@@ -637,8 +647,8 @@ body::-webkit-scrollbar-thumb {
   
 
   }
-  .aboutme p{
-    font-size: 18px;
+  .aboutme>p{
+    font-size: 1rem;
     color: white;
     text-align: center;
     padding: 20px;
@@ -711,5 +721,9 @@ body::-webkit-scrollbar-thumb {
 }
 .banner{
   border-color: #00000000;
+}
+.lenguajes>img{
+  width: 30px;
+ 
 }
 }
