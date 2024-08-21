@@ -3,9 +3,25 @@
 .inside{
   position: absolute;
 }
+#exampleModalToggleLabel{
+  color: #ffffff;
+}
+.modal{
+z-index: 1;
+}
+.modal-backdrop{
+  --bs-backdrop-zindex:none;
+}
 
+.modal-content{
+  background-color: rgba(36, 38, 42, 0.3); /* Color de fondo con opacidad */
+  backdrop-filter: blur(10px); /* Desenfoque del fondo */
+  -webkit-backdrop-filter: blur(10px); /* Soporte para navegadores WebKit como Safari */
+  border-radius: 10px; /* Opcional: Bordes redondeados para un efecto más suave */
+ 
+}
 .accordion{
-  --bs-accordion-active-bg: rgba(63, 63, 63, 0.082); 
+  --bs-accordion-active-bg: rgba(63, 63, 63, 0.048); 
 
 }
 .accordion-item{
@@ -27,6 +43,7 @@
 .section-content.active {
   display: block;
 }
+
 
 .contacto{
   border: solid 2px rgba(255, 255, 255, 0);
