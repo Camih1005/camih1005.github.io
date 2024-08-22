@@ -37,6 +37,28 @@ document.addEventListener('DOMContentLoaded', () => {
       let posY = (e.clientY / window.innerHeight) * 10; // Posición Y relativa al alto de la ventana
       background.style.backgroundPosition = posX + '% ' + posY + '%'; // Establecer la posición de fondo relativa al cursor
   });
+
+  // Espera a que la ventana cargue completamente
+  window.addEventListener('load', () => {
+    // Define el tiempo mínimo que el preloader debe mostrarse (en milisegundos)
+    const minPreloaderTime = 1000; // 1 segundo
+    
+    // Obtén la referencia al preloader
+    const preloader = document.querySelector('.preloader');
+  
+    // Establece un temporizador para ocultar el preloader después de un tiempo mínimo
+    setTimeout(() => {
+      preloader.style.opacity = '0';
+      
+      // Después de que el preloader se ha desvanecido, lo ocultamos completamente
+      setTimeout(() => {
+        preloader.style.display = 'none';
+        document.querySelector('.content').style.display = 'block';
+      }, 1000); // Tiempo que toma desvanecer el preloader
+    }, minPreloaderTime);
+  });
+  
+  
 });
 
 // Función para ocultar todas las secciones
