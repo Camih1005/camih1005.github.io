@@ -38,26 +38,34 @@ document.addEventListener('DOMContentLoaded', () => {
       background.style.backgroundPosition = posX + '% ' + posY + '%'; // Establecer la posición de fondo relativa al cursor
   });
 
-  // Espera a que la ventana cargue completamente
   window.addEventListener('load', () => {
-    // Define el tiempo mínimo que el preloader debe mostrarse (en milisegundos)
-    const minPreloaderTime = 1000; // 1 segundo
+    // Tiempo mínimo que el preloader debe mostrarse (en milisegundos)
+    const minPreloaderTime = 2000; // 2 segundos
     
     // Obtén la referencia al preloader
     const preloader = document.querySelector('.preloader');
   
-    // Establece un temporizador para ocultar el preloader después de un tiempo mínimo
-    setTimeout(() => {
+    // Configura el tiempo mínimo para que el preloader se muestre
+    const showPreloaderTimeout = setTimeout(() => {
       preloader.style.opacity = '0';
       
       // Después de que el preloader se ha desvanecido, lo ocultamos completamente
       setTimeout(() => {
         preloader.style.display = 'none';
         document.querySelector('.content').style.display = 'block';
-      }, 1000); // Tiempo que toma desvanecer el preloader
+      }, 500); // Tiempo que toma desvanecer el preloader
     }, minPreloaderTime);
-  });
   
+    // Asegúrate de limpiar el temporizador si la página carga antes de que el tiempo mínimo haya pasado
+    window.addEventListener('load', () => {
+      clearTimeout(showPreloaderTimeout); // Cancela el temporizador si la página carga antes del tiempo mínimo
+      preloader.style.opacity = '0';
+      setTimeout(() => {
+        preloader.style.display = 'none';
+        document.querySelector('.content').style.display = 'block';
+      }, 500); // Tiempo que toma desvanecer el preloader
+    });
+  });
   
 });
 
