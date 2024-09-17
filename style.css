@@ -515,7 +515,7 @@ form {
 .containerM > * {
   width: 340px;
   height: 120px;
-  border: solid 1px #bebebe;
+  border: solid 1px #ffffffe1;
   background-color: #1f1f1f;
   position: absolute;
   border-radius: 10px;
@@ -961,7 +961,7 @@ a{
 .banner {
  
   height: 96.5dvh;
-  border: solid 2px rgba(255, 255, 255, 0.623);
+  border: solid 2px rgba(255, 255, 255, 0);
   border-radius: 10px;
   
  
