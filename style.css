@@ -2,6 +2,20 @@
 .btn-close {
   background-color: rgba(255, 255, 0, 0.301);
 }
+
+body {
+  /* background-color: rgba(1, 8, 34, 0.993);  */
+  
+  background: fixed;
+
+  background-repeat: no-repeat;
+  background-color: #202020;
+  height: 100dvh;
+
+   padding: 15px;
+  
+
+}
 /*PRELOAD*/
 #content{
   display: none;
@@ -760,7 +774,27 @@ background-color: #ff0000;
   display: flex;
   flex-direction: column;
 
+
 }
+
+.proc{
+  overflow: scroll;
+  padding-top: 70px;
+}
+
+.proc::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.proc::-webkit-scrollbar-thumb {
+  background-color: #001d5c;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+ 
+}
+
 .aboutme.show {
   display: block; /* Mostrar cuando se añada la clase .show */
 }
@@ -852,7 +886,7 @@ border: solid 2px rgba(255, 255, 255, 0);
 
 
 .H{
-  top: 200px;
+  top: 150px;
   position: relative;
   
  
@@ -887,7 +921,7 @@ border: solid 2px rgba(255, 255, 255, 0);
 font-size: xx-large;
 position: relative;
 color: aliceblue;
-top: 50%;
+
 }
 
 
@@ -911,19 +945,7 @@ transition: 0.3s ease;
 background-color: rgb(255, 217, 0);
 }
 
-body {
-   /* background-color: rgba(1, 8, 34, 0.993);  */
-   
-   background: fixed;
- 
-   background-repeat: no-repeat;
-   background-color: #202020;
-   height: auto;
 
-    padding: 15px;
-   
-
-}
 
 @keyframes gradient{
   0%{
@@ -1130,7 +1152,7 @@ ul {
   object-fit: cover;
   border: none;
   background-size: cover;
-  filter: drop-shadow(0 0 30px rgba(0, 46, 88, 0.562));
+  filter: drop-shadow(0 0 90px rgba(0, 46, 88, 0.562));
   box-sizing: content-box;
   transform: scale(1);
   box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
@@ -1156,7 +1178,7 @@ ul {
  
 }
 .lenguajes{
-  margin: 40px;
+ 
 }
 
 /*SCROLL*/
@@ -1258,7 +1280,7 @@ body::-webkit-scrollbar-thumb {
   font-size: xx-large;
   position: relative;
   color: aliceblue;
-  top: 5%;
+
   }
 
   /* .spiner-wrapper{
@@ -1280,23 +1302,7 @@ body::-webkit-scrollbar-thumb {
     width: 60px;
   
   } */
-  .proc{
-    overflow: scroll;
-    padding-top: 70px;
-  }
-
-  .proc::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-  }
   
-  .proc::-webkit-scrollbar-thumb {
-    background-color: #001d5c;
-    background-size: cover;
-    background-position: center;
-    border-radius: 5px;
-   
-  }
 .button{
   font-size: 12px;
 }
