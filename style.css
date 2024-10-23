@@ -21,6 +21,35 @@ body {
   display: none;
 }
 
+textarea.infos {
+  background-color: #f0f8ff; /* Color de fondo */
+  color: #333; /* Color del texto */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 4px; /* Esquinas redondeadas */
+  padding: 10px; /* Espaciado interno */
+  width: 100%; /* Ancho completo */
+  height: 100px; /* Altura del textarea */
+  font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Estilo opcional para el textarea en enfoque */
+textarea.infos:focus {
+  border-color: #66afe9; /* Color del borde al enfocar */
+  outline: none; /* Sin borde de enfoque predeterminado */
+  box-shadow: 0 0 5px rgba(102, 175, 233, .5); /* Sombra opcional */
+}
+
+/* Cambia el color del fondo del modal a uno translúcido */
+#thankYouModal {
+  background-color: rgba(52, 58, 64, 0.9); /* Fondo oscuro con opacidad */
+}
+
+/* Cambia el color del texto del modal a blanco */
+#thankYouModal .modal-body {
+  color: white; /* Cambia el color del texto a blanco */
+}
+
+
 .preloader {
   position: fixed;
   top: 0;
@@ -862,9 +891,6 @@ background-color: none;
 
 }
 
-.desplegue{
-
-}
 /*ABOUT ME*/
 .aboutme{
 border: solid 2px rgba(255, 255, 255, 0);
