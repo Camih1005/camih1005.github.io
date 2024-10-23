@@ -910,6 +910,30 @@ border: solid 2px rgba(255, 255, 255, 0);
 
 }
 
+.login-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffd90087;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 25px;
+  font-size: 1.1em;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #e6c700;
+  transform: translateY(-3px);
+}
+
+.login-btn:focus {
+  outline: none;
+}
 
 .H{
   top: 150px;
