@@ -923,7 +923,15 @@ border: solid 2px rgba(255, 255, 255, 0);
   font-size: 1.1em;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transición para desvanecer y mover */
+  opacity: 1; /* Visibilidad inicial */
+  transform: translateY(0); /* Posición inicial */
+}
+
+.hidden {
+  opacity: 0; /* Para ocultar */
+  transform: translateY(20px); /* Mover hacia abajo durante la desaparición */
+  pointer-events: none; /* Deshabilitar eventos */
 }
 
 .login-btn:hover {

@@ -69,6 +69,22 @@ document.addEventListener('DOMContentLoaded', () => {
   
 });
 
+let lastScrollTop = 0; // Posición del scroll anterior
+const devButton = document.getElementById('devButton');
+
+window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+        // Si se desplaza hacia abajo
+        devButton.classList.add('hidden'); // Ocultar el botón
+    } else if (scrollTop === 0) {
+        // Si se encuentra en la parte superior de la página
+        devButton.classList.remove('hidden'); // Mostrar el botón
+    }
+
+    lastScrollTop = scrollTop; // Actualizar la posición del scroll
+});
 // Función para ocultar todas las secciones
 
 
