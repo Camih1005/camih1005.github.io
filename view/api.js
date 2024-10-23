@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const apiUrl = 'https://positive-encouragement-production.up.railway.app/api/mensaje';
 
     document.getElementById('myForm').addEventListener('submit', async (event) => {
-        event.preventDefault(); // Prevenir el envío del formulario por defecto
+        event.preventDefault(); 
 
         const formData = new FormData(event.target);
-        const name = formData.get('nombre'); // Obtener el nombre del formulario
+        const name = formData.get('nombre');
         const data = {
             nombre: name,
             correo: formData.get('correo'),
@@ -26,15 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Respuesta del servidor:', result);
 
             if (response.ok) {
-                document.getElementById('thankYouMessage').textContent = `Gracias, ${name}!`; // Mostrar el nombre
-                $('#thankYouModal').modal('show'); // Mostrar el modal
+                document.getElementById('thankYouMessage').textContent = `Gracias, ${name}!`; 
+                $('#thankYouModal').modal('show'); 
 
-                // Cerrar el modal después de 5 segundos
                 setTimeout(() => {
                     $('#thankYouModal').modal('hide');
-                }, 3500); // 5000 milisegundos = 5 segundos
+                }, 3500); 
 
-                event.target.reset(); // Limpia el formulario
+                event.target.reset(); 
             } else {
                 alert('Hubo un problema al enviar el mensaje: ' + result.message);
             }
@@ -44,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Cerrar el modal al hacer clic fuera de él o al presionar la tecla Escape
+   
     $('#thankYouModal').on('hidden.bs.modal', function () {
         clearTimeout();
     });

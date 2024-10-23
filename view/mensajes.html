@@ -88,11 +88,10 @@
             }
         }
 
-        // Función para mostrar mensajes
-        // Función para mostrar mensajes
+     
 function displayMessages(messages) {
     const messageBoard = document.getElementById('messageBoard');
-    messageBoard.innerHTML = ''; // Limpiar tablero
+    messageBoard.innerHTML = '';
 
     messages.forEach(message => {
         const messageElement = document.createElement('div');
@@ -109,12 +108,12 @@ function displayMessages(messages) {
 }
 
 
-        // Función para mostrar notificación
+     
         function showNotification(message) {
             if (Notification.permission === "granted") {
                 new Notification("Nuevo Mensaje", {
                     body: `ID: ${message.id} | De: ${message.nombre}\nMensaje: ${message.mensaje}`,
-                    icon: "https://example.com/icon.png" // Reemplaza con la URL de tu icono
+                    icon: "https://example.com/icon.png" 
                 });
             }
         }
